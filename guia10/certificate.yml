@@ -1,0 +1,11 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: selfsigned-cert
+spec:
+  dnsNames:
+    - ejemplo99.apps.csdqa.comcel.com.gt
+  secretName: secret-ingress-tls
+  issuerRef:
+    name: test-selfsigned

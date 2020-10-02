@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+spec:
+  rules:
+  - host: ejemplo99.apps.csdqa.comcel.com.gt
+    http:
+      paths:
+      - backend:
+          serviceName: service-nginx-tls
+          servicePort: 80
+        path: /
+  tls:
+  - hosts:
+    - ejemplo99.apps.csdqa.comcel.com.gt
+    secretName: secret-ingress-tls
